@@ -1,6 +1,5 @@
 const EMAIL = 'YOUR-EMAIL@example.com';
 
-// Reading progress
 const progress = document.getElementById('progress');
 window.addEventListener('scroll', () => {
   const h = document.documentElement;
@@ -8,44 +7,79 @@ window.addEventListener('scroll', () => {
   progress.style.width = (denominator ? (h.scrollTop / denominator) * 100 : 0) + '%';
 }, { passive: true });
 
-// AI concept carousel — this section intentionally contains AI imagery only.
-const viewport = document.getElementById('aiCarouselViewport');
-const track = document.getElementById('aiCarouselTrack');
-const slides = [...document.querySelectorAll('.ai-slide')];
+// Reality → AI reveal. The first state is 100% real; dragging the line right reveals the AI furnishing concept.
+const compare = document.getElementById('aiCompare');
+const compareAi = document.getElementById('compareAi');
+const handle = document.getElementById('compareHandle');
+const gallery = document.getElementById('aiGallery');
+const galleryTrack = document.getElementById('aiGalleryTrack');
+const aiSlides = [...document.querySelectorAll('.ai-gallery-slide')];
 const prev = document.getElementById('aiPrev');
 const next = document.getElementById('aiNext');
 const dots = document.getElementById('aiDots');
+const counter = document.getElementById('aiCounter');
+let reveal = 0;
 let current = 0;
-let startX = 0;
-let dragging = false;
+let draggingReveal = false;
+let draggingGallery = false;
+let galleryStartX = 0;
+
+function syncCompareImage() {
+  const aiImage = compareAi.querySelector('img');
+  if (aiImage) aiImage.style.width = compare.clientWidth + 'px';
+}
+function setReveal(value) {
+  reveal = Math.max(0, Math.min(100, value));
+  compareAi.style.width = reveal + '%';
+  handle.style.left = reveal + '%';
+  handle.setAttribute('aria-valuenow', Math.round(reveal));
+  syncCompareImage();
+}
+function pointerPercent(e) {
+  const r = compare.getBoundingClientRect();
+  return ((e.clientX - r.left) / r.width) * 100;
+}
+compare.addEventListener('pointerdown', e => {
+  draggingReveal = true;
+  compare.setPointerCapture?.(e.pointerId);
+  setReveal(pointerPercent(e));
+});
+compare.addEventListener('pointermove', e => { if (draggingReveal) setReveal(pointerPercent(e)); });
+compare.addEventListener('pointerup', () => { draggingReveal = false; });
+compare.addEventListener('pointercancel', () => { draggingReveal = false; });
 
 function renderDots() {
-  dots.innerHTML = slides.map((_, i) => `<button type="button" aria-label="Go to AI concept ${i + 1}" aria-current="${i === current}"></button>`).join('');
+  dots.innerHTML = aiSlides.map((_, i) => `<button type="button" aria-label="Go to AI concept ${i + 1}" aria-current="${i === current}"></button>`).join('');
   dots.querySelectorAll('button').forEach((b, i) => b.addEventListener('click', () => goTo(i)));
+  counter.textContent = String(current + 1).padStart(2,'0') + ' / ' + String(aiSlides.length).padStart(2,'0');
 }
-
 function goTo(index) {
-  current = (index + slides.length) % slides.length;
-  track.style.transform = `translateX(-${current * 100}%)`;
-  slides.forEach((slide, i) => slide.classList.toggle('is-active', i === current));
+  current = (index + aiSlides.length) % aiSlides.length;
+  galleryTrack.style.transform = `translateX(-${current * 100}%)`;
   renderDots();
 }
+prev.addEventListener('click', e => { e.stopPropagation(); goTo(current - 1); });
+next.addEventListener('click', e => { e.stopPropagation(); goTo(current + 1); });
 
-prev.addEventListener('click', () => goTo(current - 1));
-next.addEventListener('click', () => goTo(current + 1));
-
-viewport.addEventListener('pointerdown', e => { startX = e.clientX; dragging = true; viewport.setPointerCapture?.(e.pointerId); });
-viewport.addEventListener('pointerup', e => {
-  if (!dragging) return;
-  const delta = e.clientX - startX;
-  dragging = false;
+gallery.addEventListener('pointerdown', e => {
+  if (e.target.closest('button')) return;
+  draggingGallery = true;
+  galleryStartX = e.clientX;
+  gallery.setPointerCapture?.(e.pointerId);
+});
+gallery.addEventListener('pointerup', e => {
+  if (!draggingGallery) return;
+  const delta = e.clientX - galleryStartX;
+  draggingGallery = false;
   if (Math.abs(delta) > 45) goTo(current + (delta < 0 ? 1 : -1));
 });
-viewport.addEventListener('pointercancel', () => { dragging = false; });
+gallery.addEventListener('pointercancel', () => { draggingGallery = false; });
 
 renderDots();
+syncCompareImage();
+setReveal(0);
+window.addEventListener('resize', syncCompareImage, { passive: true });
 
-// Private viewing enquiry
 const form = document.getElementById('viewingForm');
 form.addEventListener('submit', e => {
   e.preventDefault();

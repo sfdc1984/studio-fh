@@ -66,24 +66,40 @@
         <div><h2>Empty today.<br><em>Yours tomorrow.</em></h2></div>
         <p>This is a furnishing concept for the studio. Every image in this sequence is an AI visualisation — a way to imagine how the real space could feel once furnished. These are not photographs of Unit 404.</p>
       </div>
-      <div class="ai-carousel" aria-label="AI furnished studio concepts">
-        <div class="ai-carousel-viewport" id="aiCarouselViewport">
-          <div class="ai-carousel-track" id="aiCarouselTrack">
-            <figure class="ai-slide is-active"><img src="images/ai-furnished-studio.jpg" alt="AI furnished studio living and bedroom concept"><figcaption><span>LIVING / BEDROOM</span><small>AI VISUALISATION</small></figcaption></figure>
-            <figure class="ai-slide"><img src="images/ai-kitchen.jpg" alt="AI furnished kitchen concept"><figcaption><span>KITCHEN</span><small>AI VISUALISATION</small></figcaption></figure>
-            <figure class="ai-slide"><img src="images/ai-entry.jpg" alt="AI furnished entry concept"><figcaption><span>ENTRY</span><small>AI VISUALISATION</small></figcaption></figure>
-            <figure class="ai-slide"><img src="images/ai-wardrobe.jpg" alt="AI furnished wardrobe concept"><figcaption><span>WARDROBE</span><small>AI VISUALISATION</small></figcaption></figure>
-            <figure class="ai-slide"><img src="images/ai-bathroom.jpg" alt="AI furnished bathroom concept"><figcaption><span>BATHROOM</span><small>AI VISUALISATION</small></figcaption></figure>
-            <figure class="ai-slide"><img src="images/ai-shower.jpg" alt="AI furnished shower concept"><figcaption><span>SHOWER</span><small>AI VISUALISATION</small></figcaption></figure>
-            <figure class="ai-slide"><img src="images/ai-kitchen-storage.jpg" alt="AI kitchen storage concept"><figcaption><span>KITCHEN STORAGE</span><small>AI VISUALISATION</small></figcaption></figure>
-            <figure class="ai-slide"><img src="images/ai-balcony-view.jpg" alt="AI furnished balcony view concept"><figcaption><span>BALCONY VIEW</span><small>AI VISUALISATION</small></figcaption></figure>
+      <div class="ai-carousel" aria-label="Reality to AI furnishing concepts">
+        <div class="ai-stage" id="aiStage">
+          <div class="ai-slide-label real-label"><span>REAL</span><small>AS IT IS TODAY</small></div>
+          <div class="ai-slide-label ai-label"><span>AI CONCEPT</span><small>WHAT IT COULD BECOME</small></div>
+
+          <div class="ai-compare" id="aiCompare">
+            <img class="compare-real" src="images/real-studio.jpg" alt="Actual Unit 404 empty studio">
+            <div class="compare-ai" id="compareAi">
+              <img src="images/ai-furnished-studio.jpg" alt="AI furnished studio living and bedroom concept">
+            </div>
+            <button class="compare-handle" id="compareHandle" type="button" aria-label="Drag to reveal AI furnished concept" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <span class="handle-line"></span><span class="handle-grip">↔</span>
+            </button>
+          </div>
+
+          <div class="ai-gallery" id="aiGallery" aria-live="polite">
+            <div class="ai-gallery-track" id="aiGalleryTrack">
+              <figure class="ai-gallery-slide"><img src="images/ai-kitchen.jpg" alt="AI furnished kitchen concept"><figcaption><b>KITCHEN</b><span>AI VISUALISATION</span></figcaption></figure>
+              <figure class="ai-gallery-slide"><img src="images/ai-entry.jpg" alt="AI furnished entry concept"><figcaption><b>ENTRY</b><span>AI VISUALISATION</span></figcaption></figure>
+              <figure class="ai-gallery-slide"><img src="images/ai-wardrobe.jpg" alt="AI furnished wardrobe concept"><figcaption><b>WARDROBE</b><span>AI VISUALISATION</span></figcaption></figure>
+              <figure class="ai-gallery-slide"><img src="images/ai-bathroom.jpg" alt="AI furnished bathroom concept"><figcaption><b>BATHROOM</b><span>AI VISUALISATION</span></figcaption></figure>
+              <figure class="ai-gallery-slide"><img src="images/ai-shower.jpg" alt="AI furnished shower concept"><figcaption><b>SHOWER</b><span>AI VISUALISATION</span></figcaption></figure>
+              <figure class="ai-gallery-slide"><img src="images/ai-kitchen-storage.jpg" alt="AI kitchen storage concept"><figcaption><b>KITCHEN STORAGE</b><span>AI VISUALISATION</span></figcaption></figure>
+              <figure class="ai-gallery-slide"><img src="images/ai-balcony-view.jpg" alt="AI furnished balcony view concept"><figcaption><b>BALCONY VIEW</b><span>AI VISUALISATION</span></figcaption></figure>
+            </div>
+            <button class="ai-nav ai-prev" id="aiPrev" type="button" aria-label="Previous AI concept">‹</button>
+            <button class="ai-nav ai-next" id="aiNext" type="button" aria-label="Next AI concept">›</button>
+            <div class="ai-gallery-counter" id="aiCounter">01 / 07</div>
           </div>
         </div>
-        <button class="ai-nav ai-prev" id="aiPrev" type="button" aria-label="Previous AI concept">‹</button>
-        <button class="ai-nav ai-next" id="aiNext" type="button" aria-label="Next AI concept">›</button>
+
         <div class="ai-carousel-footer">
           <div class="ai-dots" id="aiDots" aria-label="AI concept slides"></div>
-          <div class="ai-hint">DRAG OR SWIPE <span>← →</span></div>
+          <div class="ai-hint"><strong>DRAG THE LINE ON THE IMAGE</strong><span>REAL → AI</span></div>
         </div>
       </div>
     </section>

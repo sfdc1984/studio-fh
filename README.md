@@ -35,3 +35,8 @@ This final package deliberately separates the truth layer from the concept layer
 - The previous composite `vision-montage.png` is intentionally excluded from this package to prevent accidental mixing.
 
 The AI carousel is labelled `AI VISUALISATION` on every slide and explicitly states that it is not a photograph of the current apartment.
+
+## Final AI interaction
+The `02 / THE POSSIBILITY` section now uses a reality-to-AI reveal directly on the image. It opens on the real empty studio photograph. The vertical drag handle sits on the image itself; dragging it reveals the AI furnished living/bedroom concept. Below that reveal is a separate full-frame AI concept gallery for kitchen, entry, wardrobe, bathroom, shower, kitchen storage, and balcony. AI images use `object-fit: contain` so their original compositions are not cropped or cramped.
+
+Image rule: `real-*` assets are original photographs; `ai-*` assets are AI visualisations. They are not mixed in the real-photo section.
