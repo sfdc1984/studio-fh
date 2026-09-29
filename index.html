@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#10100f" />
+  <meta name="description" content="A private visual tour of a studio at FH Residency, Jumeirah Village Triangle, Dubai." />
+  <title>FH Residency — Private Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header class="topbar">
+    <a class="wordmark" href="#top">FH <span>RESIDENCY</span></a>
+    <nav>
+      <a href="#studio">Studio</a><a href="#possibility">Possibility</a><a href="#building">Building</a><a href="#location">Location</a>
+    </nav>
+    <a class="top-cta wa-link" href="https://wa.me/971567874295" data-wa-message="Hi, I found Unit 404 at FH Residency and I'd like to know more about the studio.">WhatsApp about Unit 404 <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">JUMEIRAH VILLAGE TRIANGLE · DUBAI</p>
+        <h1>One studio.<br><em>One possibility.</em></h1>
+        <p class="lede">See the actual space first. Then explore how the same studio could feel once furnished.</p>
+        <div class="hero-meta"><span>UNIT 404</span><span>FH RESIDENCY</span><span>PRIVATE LISTING</span></div>
+        <a class="scroll-cue" href="#studio"><span>↓</span> See the apartment</a>
+        <a class="hero-wa wa-link" href="https://wa.me/971567874295" data-wa-message="Hi, I've just seen the actual walkthrough of Unit 404 at FH Residency. I'd like to know more about it.">I've seen the real space · WhatsApp <span>↗</span></a>
+      </div>
+      <div class="hero-media">
+        <div class="video-frame">
+          <video autoplay muted loop playsinline poster="images/real-studio.jpg">
+            <source src="images/apartment-walkthrough.mp4" type="video/mp4">
+          </video>
+          <div class="video-label"><span class="live-dot"></span> REAL APARTMENT · WALKTHROUGH</div>
+        </div>
+        <div class="hero-note">No developer render.<br><strong>This is the actual space.</strong></div>
+      </div>
+    </section>
+
+    <section class="statement dark" id="studio">
+      <div class="section-kicker">01 / THE STUDIO</div>
+      <div class="statement-grid">
+        <h2>Start with<br><em>what is real.</em></h2>
+        <p>The photographs and walkthrough show the apartment in its current condition. No furniture has been added to make the room look bigger. No CGI is being presented as reality.</p>
+      </div>
+      <div class="real-note">Every image below is an actual photograph of Unit 404 or FH Residency — no AI imagery in this section.</div>
+      <div class="section-cta"><span>You've seen the apartment as it is.</span><a class="wa-link" href="https://wa.me/971567874295" data-wa-message="Hi, I've looked through the actual photos of Unit 404 at FH Residency. I'd like to understand the apartment and viewing options.">Ask me about the real apartment ↗</a></div>
+      <div class="photo-grid real-gallery">
+        <figure class="photo photo-a"><img src="images/real-studio.jpg" alt="Actual Unit 404 studio room with balcony doors"><figcaption>STUDIO · ACTUAL</figcaption></figure>
+        <figure class="photo photo-b"><img src="images/real-kitchen-wide.jpg" alt="Actual Unit 404 fitted kitchen"><figcaption>KITCHEN · ACTUAL</figcaption></figure>
+        <figure class="photo photo-c"><img src="images/real-bathroom-vanity.jpg" alt="Actual Unit 404 bathroom vanity"><figcaption>BATHROOM · ACTUAL</figcaption></figure>
+        <figure class="photo photo-d"><img src="images/real-building-sign.jpg" alt="Actual FH Residency building sign"><figcaption>FH RESIDENCY · ACTUAL</figcaption></figure>
+        <figure class="photo photo-e"><img src="images/real-shower.jpg" alt="Actual Unit 404 shower"><figcaption>SHOWER · ACTUAL</figcaption></figure>
+        <figure class="photo photo-f"><img src="images/real-kitchen-fridge.jpg" alt="Actual Teka refrigerator and fitted kitchen"><figcaption>KITCHEN · ACTUAL</figcaption></figure>
+        <figure class="photo photo-g"><img src="images/real-bathroom.jpg" alt="Actual Unit 404 bathroom"><figcaption>BATHROOM · ACTUAL</figcaption></figure>
+        <figure class="photo photo-h"><img src="images/real-jvt.jpg" alt="Actual JVT surroundings"><figcaption>JVT · ACTUAL</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="possibility" id="possibility">
+      <div class="section-kicker">02 / THE POSSIBILITY</div>
+      <div class="possibility-head">
+        <div><h2>Empty today.<br><em>Yours tomorrow.</em></h2></div>
+        <p>This is the design layer. The first image begins with the real empty studio; drag the line across it to reveal the AI furnishing concept. The carousel below contains AI visualisations only.</p>
+      </div>
+
+      <div class="reveal-wrap">
+        <div class="reveal-topline"><span>REAL · AS IT IS TODAY</span><span>AI CONCEPT · WHAT IT COULD BECOME</span></div>
+        <div class="ai-compare" id="aiCompare">
+          <img class="compare-real" src="images/real-studio-slider.jpg" alt="Actual empty studio, cropped from an original photograph">
+          <div class="compare-ai" id="compareAi"><img src="images/ai-furnished-studio.jpg" alt="AI furnished studio concept"></div>
+          <button class="compare-handle" id="compareHandle" type="button" aria-label="Drag to reveal the AI furnished concept" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <span class="handle-line"></span><span class="handle-grip"><b>↔</b></span>
+          </button>
+          <div class="reveal-copy reveal-real-copy"><b>EMPTY TODAY</b><small>Actual Unit 404</small></div>
+          <div class="reveal-copy reveal-ai-copy"><b>YOURS TOMORROW</b><small>AI furnishing visualisation</small></div>
+        </div>
+        <div class="reveal-hint"><span>DRAG THE HANDLE</span><b>REAL → POSSIBILITY</b><small>Swipe on mobile</small></div>
+      </div>
+
+      <div class="section-cta possibility-cta"><span>Could you see yourself making this space yours?</span><a class="wa-link" href="https://wa.me/971567874295" data-wa-message="Hi, I've explored the furnished possibilities for Unit 404 at FH Residency. I'd like to talk about what the studio could become and arrange a viewing.">I can see the possibility · WhatsApp ↗</a></div>
+
+      <div class="concept-intro">
+        <div><span class="mini-kicker">THE DESIGN DIRECTION</span><h3>One space.<br><em>Many ways to live.</em></h3></div>
+        <p>Keep the palette warm, the footprint efficient and the studio uncluttered. These concepts are intentionally possibilities — not promises about what is currently installed.</p>
+      </div>
+
+      <div class="ai-gallery" id="aiGallery" aria-label="AI furnishing concepts">
+        <div class="ai-gallery-track" id="aiGalleryTrack">
+          <figure class="ai-gallery-slide"><img src="images/ai-furnished-studio.jpg" alt="AI furnished living and bedroom studio concept"><figcaption><b>LIVING · BEDROOM</b><span>AI VISUALISATION</span></figcaption></figure>
+          <figure class="ai-gallery-slide"><img src="images/ai-kitchen.jpg" alt="AI kitchen furnishing concept"><figcaption><b>KITCHEN</b><span>AI VISUALISATION</span></figcaption></figure>
+          <figure class="ai-gallery-slide"><img src="images/ai-entry.jpg" alt="AI entry furnishing concept"><figcaption><b>ENTRY</b><span>AI VISUALISATION</span></figcaption></figure>
+          <figure class="ai-gallery-slide"><img src="images/ai-wardrobe.jpg" alt="AI wardrobe furnishing concept"><figcaption><b>WARDROBE</b><span>AI VISUALISATION</span></figcaption></figure>
+          <figure class="ai-gallery-slide"><img src="images/ai-bathroom.jpg" alt="AI bathroom furnishing concept"><figcaption><b>BATHROOM</b><span>AI VISUALISATION</span></figcaption></figure>
+          <figure class="ai-gallery-slide"><img src="images/ai-shower.jpg" alt="AI shower furnishing concept"><figcaption><b>SHOWER</b><span>AI VISUALISATION</span></figcaption></figure>
+          <figure class="ai-gallery-slide"><img src="images/ai-balcony-view.jpg" alt="AI balcony furnishing concept"><figcaption><b>BALCONY</b><span>AI VISUALISATION</span></figcaption></figure>
+        </div>
+        <button class="ai-nav ai-prev" id="aiPrev" type="button" aria-label="Previous AI concept">‹</button>
+        <button class="ai-nav ai-next" id="aiNext" type="button" aria-label="Next AI concept">›</button>
+        <div class="ai-gallery-counter" id="aiCounter">01 / 07</div>
+      </div>
+      <div class="ai-carousel-footer">
+        <div class="ai-dots" id="aiDots" aria-label="AI concept slides"></div>
+        <div class="ai-hint"><strong>SWIPE OR DRAG</strong><span>AI CONCEPTS ONLY</span></div>
+      </div>
+    </section>
+
+    <section class="at-a-glance dark">
+      <div class="section-kicker">THE BUILDING, AT A GLANCE</div>
+      <div class="glance-grid">
+        <div><strong>24</strong><span>RESIDENTIAL LEVELS</span></div>
+        <div><strong>01</strong><span>PRIVATE STUDIO</span></div>
+        <div><strong>24F</strong><span>COWORKING + MARINA VIEW</span></div>
+        <div><strong>01F</strong><span>POOL · GYM · YOGA</span></div>
+      </div>
+      <p class="glance-note">Building information is based on the official FH Residency website. Amenities and descriptions should be confirmed before a viewing.</p>
+    </section>
+
+    <section class="building dark" id="building">
+      <div class="building-intro">
+        <div class="section-kicker">03 / THE BUILDING</div>
+        <h2>Four floors<br>above the lobby.<br><em>Twenty above you.</em></h2>
+        <p>FH Residency describes a 24-level residential building with first-floor lifestyle amenities and a 24th-floor coworking space with Dubai Marina views.</p>
+        <a class="inline-link" href="https://www.fh-residency.ae/" target="_blank" rel="noreferrer">View official building information ↗</a>
+      </div>
+      <div class="vertical-story">
+        <div class="floor-card"><span>01</span><strong>ARRIVE</strong><p>Modern lobby and common areas.</p></div>
+        <div class="floor-card active"><span>04</span><strong>YOUR STUDIO</strong><p>Private residence · Unit 404.</p></div>
+        <div class="floor-card"><span>01F</span><strong>RESET</strong><p>Pool · gym · yoga · outdoor workout.</p></div>
+        <div class="floor-card tower"><span>24</span><strong>WORK ABOVE THE CITY</strong><p>Coworking space with Dubai Marina views.</p></div>
+      </div>
+    </section>
+
+    <section class="amenities">
+      <div class="section-kicker">04 / LIFE INSIDE</div>
+      <div class="amenity-intro"><h2>The building<br>does some of the work.</h2><p>The official FH Residency site lists a first-floor pool, gym, yoga studio, outdoor workout area and kids' play facilities, plus coworking on the 24th floor.</p></div>
+      <div class="amenity-grid">
+        <article><span>01</span><h3>SWIM</h3><p>Pool on the first floor.</p></article>
+        <article><span>02</span><h3>TRAIN</h3><p>Gym and outdoor workout area.</p></article>
+        <article><span>03</span><h3>RESET</h3><p>Dedicated yoga studio.</p></article>
+        <article><span>04</span><h3>WORK</h3><p>24th-floor coworking with Dubai Marina views.</p></article>
+      </div>
+      <div class="amenity-source">Source: official FH Residency website · <a href="https://www.fh-residency.ae/" target="_blank" rel="noreferrer">fh-residency.ae ↗</a></div>
+    </section>
+
+    <section class="location dark" id="location">
+      <div class="section-kicker">05 / THE BASE</div>
+      <div class="location-head"><h2>JVT is the base.<br><em>Dubai is the playground.</em></h2><p>Approximate drive times published by FH Residency. Actual journey times vary with traffic.</p></div>
+      <div class="destinations">
+        <div class="destination big"><strong>10</strong><span>MIN</span><p>Dubai Marina</p></div>
+        <div class="destination"><strong>10</strong><span>MIN</span><p>Bluewaters</p></div>
+        <div class="destination"><strong>15</strong><span>MIN</span><p>Palm Jumeirah</p></div>
+        <div class="destination"><strong>20</strong><span>MIN</span><p>Downtown · Dubai Mall</p></div>
+        <div class="destination"><strong>25</strong><span>MIN</span><p>Dubai International Airport</p></div>
+      </div>
+      <div class="source-note">Location times: official FH Residency website. These are published estimates, not guaranteed journey times.</div>
+      <div class="section-cta location-cta"><span>Now you know the space. Now you know the base.</span><a class="wa-link" href="https://wa.me/971567874295" data-wa-message="Hi, I've explored Unit 404 at FH Residency and the JVT location. I'd like to know the next steps for a viewing.">Talk about a viewing ↗</a></div>
+    </section>
+
+    <section class="journey">
+      <div class="section-kicker">06 / YOUR VISIT</div>
+      <div class="journey-head"><h2>See it.<br><em>Then visit it.</em></h2><p>The page is designed to answer the first questions before you spend time travelling to the property.</p></div>
+      <div class="journey-grid">
+        <article><span>01</span><b>SEE</b><p>Walk through the actual apartment and inspect the real photographs.</p></article>
+        <article><span>02</span><b>IMAGINE</b><p>Drag the reveal and explore the AI furnishing possibilities.</p></article>
+        <article><span>03</span><b>UNDERSTAND</b><p>Explore the building, amenities and JVT location.</p></article>
+        <article><span>04</span><b>VISIT</b><p>Request a private viewing when you are ready.</p></article>
+      </div>
+    </section>
+
+    <section class="faq dark" id="faq">
+      <div class="section-kicker">QUESTIONS, BEFORE THE VIEWING</div>
+      <div class="faq-head"><h2>Good questions<br><em>deserve clear answers.</em></h2><p>Keep this section practical. Anything not confirmed should be confirmed during the viewing.</p></div>
+      <div class="faq-list">
+        <details><summary>Is the apartment currently furnished?</summary><p>No. The real-property section shows the current unfurnished condition. The furnished images are AI visualisations only.</p></details>
+        <details><summary>Are the furnished images photographs of the apartment?</summary><p>No. They are design concepts created to show one possible furnishing direction.</p></details>
+        <details><summary>What amenities are listed for FH Residency?</summary><p>The official site lists a pool, gym, yoga studio, outdoor workout area, kids' facilities and 24th-floor coworking with Dubai Marina views.</p></details>
+        <details><summary>How do I arrange a viewing?</summary><p>Use the WhatsApp enquiry form below. Availability and viewing times can then be confirmed directly.</p></details>
+      </div>
+    </section>
+
+    <section class="viewing" id="viewing">
+      <div class="viewing-inner">
+        <div class="section-kicker">07 / COME SEE IT</div>
+        <h2>The studio is real.<br><em>The possibility is yours.</em></h2>
+        <p>Interested in seeing Unit 404 in person? Send your name, WhatsApp number and a short message directly to the listing contact.</p>
+        <form id="viewingForm">
+          <input name="name" required placeholder="Your name" autocomplete="name">
+          <input name="phone" required placeholder="WhatsApp number" autocomplete="tel">
+          <textarea name="message" required rows="4" placeholder="Your message" autocomplete="off">Hi, I'm interested in Unit 404 at FH Residency and would like to arrange a viewing.</textarea>
+          <button type="submit">Start the conversation on WhatsApp <span>↗</span></button>
+        </form>
+        <small>WhatsApp will open with a ready-to-send enquiry. You can edit it before sending.</small>
+      </div>
+    </section>
+  </main>
+
+
+  <a class="mobile-viewing" href="#viewing">Private viewing <span>↗</span></a>
+  <footer><span>FH RESIDENCY · JVT · DUBAI</span><span>PRIVATE STUDIO · UNIT 404</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
