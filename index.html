@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#10100f" />
+  <meta name="description" content="A private visual tour of a studio at FH Residency, Jumeirah Village Triangle, Dubai." />
+  <title>FH Residency — Private Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header class="topbar">
+    <a class="wordmark" href="#top">FH <span>RESIDENCY</span></a>
+    <nav>
+      <a href="#studio">Studio</a><a href="#possibility">Possibility</a><a href="#building">Building</a><a href="#location">Location</a>
+    </nav>
+    <a class="top-cta" href="#viewing">Private viewing <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">JUMEIRAH VILLAGE TRIANGLE · DUBAI</p>
+        <h1>One studio.<br><em>One possibility.</em></h1>
+        <p class="lede">A private look at a real studio in FH Residency — as it is today, and what it could become.</p>
+        <div class="hero-meta"><span>UNIT 404</span><span>FH RESIDENCY</span><span>PRIVATE LISTING</span></div>
+        <a class="scroll-cue" href="#studio"><span>↓</span> See the apartment</a>
+      </div>
+      <div class="hero-media">
+        <div class="video-frame">
+          <video autoplay muted loop playsinline poster="images/actual-1.jpg">
+            <source src="images/apartment-walkthrough.mp4" type="video/mp4">
+          </video>
+          <div class="video-label"><span class="live-dot"></span> REAL APARTMENT · WALKTHROUGH</div>
+        </div>
+        <div class="hero-note">No developer render.<br><strong>This is the actual space.</strong></div>
+      </div>
+    </section>
+
+    <section class="statement dark" id="studio">
+      <div class="section-kicker">01 / THE STUDIO</div>
+      <div class="statement-grid">
+        <h2>Start with<br><em>what is real.</em></h2>
+        <p>The photographs and walkthrough show the apartment in its current condition. No furniture has been added to make the room look bigger. No CGI is being presented as reality.</p>
+      </div>
+      <div class="photo-grid">
+        <figure class="photo photo-a"><img src="images/actual-1.jpg" alt="Actual studio interior"></figure>
+        <figure class="photo photo-b"><img src="images/actual-2.jpg" alt="Actual studio interior, second view"></figure>
+      </div>
+    </section>
+
+    <section class="possibility" id="possibility">
+      <div class="section-kicker">02 / THE POSSIBILITY</div>
+      <div class="possibility-head">
+        <div><h2>Empty today.<br><em>Yours tomorrow.</em></h2></div>
+        <p>Use the slider to move between the actual apartment and a furnishing concept. The concept is illustrative — it shows one possible direction, not the current condition.</p>
+      </div>
+      <div class="reveal" id="reveal">
+        <img class="reveal-base" src="images/actual-1.jpg" alt="Actual apartment">
+        <div class="reveal-concept" id="concept"><img src="images/vision-montage.png" alt="AI furnishing concept montage"></div>
+        <div class="reveal-line" id="revealLine"></div>
+        <div class="reveal-handle" id="revealHandle">↔</div>
+        <div class="reveal-label actual-label">ACTUAL</div>
+        <div class="reveal-label concept-label">CONCEPT</div>
+      </div>
+      <div class="range-wrap"><input id="range" type="range" min="0" max="100" value="52" aria-label="Compare actual apartment with concept"></div>
+    </section>
+
+    <section class="building dark" id="building">
+      <div class="building-intro">
+        <div class="section-kicker">03 / THE BUILDING</div>
+        <h2>Four floors<br>above the lobby.<br><em>Twenty above you.</em></h2>
+        <p>FH Residency rises through 24 residential levels. The building's official amenities include a pool, gym, yoga studio, outdoor workout area, kids' facilities, and a 24th-floor coworking space with Dubai Marina views.</p>
+      </div>
+      <div class="vertical-story">
+        <div class="floor-card"><span>01</span><strong>ARRIVE</strong><p>Modern lobby and common areas.</p></div>
+        <div class="floor-card active"><span>04</span><strong>YOUR STUDIO</strong><p>Private residence · Unit 404.</p></div>
+        <div class="floor-card"><span>01F</span><strong>RESET</strong><p>Pool · gym · yoga · outdoor workout.</p></div>
+        <div class="floor-card tower"><span>24</span><strong>WORK ABOVE THE CITY</strong><p>Coworking space with Dubai Marina views.</p></div>
+      </div>
+    </section>
+
+    <section class="amenities">
+      <div class="section-kicker">04 / LIFE INSIDE</div>
+      <div class="amenity-intro"><h2>The building<br>does some of the work.</h2><p>When home is also the place you can swim, train, stretch, work and reset, the square footage of the studio is only part of the story.</p></div>
+      <div class="amenity-grid">
+        <article><span>01</span><h3>SWIM</h3><p>Pool on the first floor.</p></article>
+        <article><span>02</span><h3>TRAIN</h3><p>Gym and outdoor workout area.</p></article>
+        <article><span>03</span><h3>RESET</h3><p>Dedicated yoga studio.</p></article>
+        <article><span>04</span><h3>WORK</h3><p>24th-floor coworking with Marina views.</p></article>
+      </div>
+    </section>
+
+    <section class="location dark" id="location">
+      <div class="section-kicker">05 / THE BASE</div>
+      <div class="location-head"><h2>JVT is the base.<br><em>Dubai is the playground.</em></h2><p>Approximate drive times published by FH Residency. Actual journey times vary with traffic.</p></div>
+      <div class="destinations">
+        <div class="destination big"><strong>10</strong><span>MIN</span><p>Dubai Marina</p></div>
+        <div class="destination"><strong>10</strong><span>MIN</span><p>Bluewaters</p></div>
+        <div class="destination"><strong>15</strong><span>MIN</span><p>Palm Jumeirah</p></div>
+        <div class="destination"><strong>20</strong><span>MIN</span><p>Downtown · Dubai Mall</p></div>
+        <div class="destination"><strong>25</strong><span>MIN</span><p>Dubai International Airport</p></div>
+      </div>
+      <div class="source-note">Building and location information: <a href="https://www.fh-residency.ae/" target="_blank" rel="noreferrer">official FH Residency website ↗</a></div>
+    </section>
+
+    <section class="market dark" id="market">
+      <div class="section-kicker">06 / MARKET EVIDENCE</div>
+      <div class="market-head">
+        <div><h2>Know the market.<br><em>Then judge the studio.</em></h2></div>
+        <p>JVT is a substantial residential market. Instead of putting a made-up "average rent" on this page, this section points you to live market sources and shows what is actually available publicly.</p>
+      </div>
+      <div class="market-grid">
+        <article class="market-card featured"><span>JVT · 2026</span><strong>25,126</strong><p>Total units shown in DXB Interact's public JVT market view.</p></article>
+        <article class="market-card"><span>STUDIOS</span><strong>7,114</strong><p>Studio units shown in the public JVT dataset.</p></article>
+        <article class="market-card"><span>STUDIO SALES</span><strong>1,615</strong><p>Sales transactions shown for studios in the public JVT view.</p></article>
+      </div>
+      <div class="market-note"><strong>Rental data is different.</strong> DXB Interact exposes JVT rental trends and project rent history, but some property-level numbers require RERA access. Dubai Land Department also provides the official Rental Index / Smart Rental Index. We link to both rather than presenting a misleading single rent number.</div>
+      <div class="market-actions">
+        <a class="market-button primary" href="https://dxbinteract.com/projects/jumeirah-village-triangle" target="_blank" rel="noreferrer">Explore JVT rental & market data ↗</a>
+        <a class="market-button" href="https://dubailand.gov.ae/en/eservices/rental-index/rental-index" target="_blank" rel="noreferrer">Check official DLD Rental Index ↗</a>
+      </div>
+      <div class="source-note">Market figures: DXB Interact JVT 2026 public view. Rental Index: Dubai Land Department. Market data can change; check the source pages for the latest figures.</div>
+    </section>
+
+    <section class="viewing" id="viewing">
+      <div class="viewing-inner">
+        <div class="section-kicker">07 / COME SEE IT</div>
+        <h2>The studio is real.<br><em>The possibility is yours.</em></h2>
+        <p>Interested in seeing Unit 404 in person? Leave your details below and arrange a private viewing.</p>
+        <form id="viewingForm">
+          <input name="name" required placeholder="Your name" autocomplete="name">
+          <input name="phone" required placeholder="WhatsApp / phone" autocomplete="tel">
+          <input name="email" type="email" placeholder="Email (optional)" autocomplete="email">
+          <button type="submit">Request private viewing <span>↗</span></button>
+        </form>
+        <small>Before publishing, replace the enquiry email in <code>app.js</code> with your preferred contact address.</small>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>FH RESIDENCY · JVT · DUBAI</span><span>PRIVATE STUDIO · UNIT 404</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
