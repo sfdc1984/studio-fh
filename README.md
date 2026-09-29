@@ -17,3 +17,7 @@ The site intentionally does not hard-code a single "JVT average rent". DXB Inter
 1. Replace `YOUR-EMAIL@example.com` in `app.js` with the preferred enquiry email.
 2. Upload the extracted contents to the GitHub repository root.
 3. Connect the repository to Vercel.
+
+
+## V3 asset correction
+The `01 / THE STUDIO` gallery uses only user-supplied real photographs. The AI furnishing montage is used only in `02 / THE POSSIBILITY`.
