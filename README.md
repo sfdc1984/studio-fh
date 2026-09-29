@@ -21,3 +21,17 @@ The site intentionally does not hard-code a single "JVT average rent". DXB Inter
 
 ## V3 asset correction
 The `01 / THE STUDIO` gallery uses only user-supplied real photographs. The AI furnishing montage is used only in `02 / THE POSSIBILITY`.
+
+
+## Final image separation
+
+This final package deliberately separates the truth layer from the concept layer:
+
+- `real-*.jpg` = user-supplied original property/building photographs only.
+- `apartment-walkthrough.mp4` = user-supplied real apartment walkthrough.
+- `ai-*.jpg` = AI furnishing visualisations only.
+- The `01 / THE STUDIO` section uses only the real assets.
+- The `02 / THE POSSIBILITY` section uses only the AI assets in a swipe/drag carousel.
+- The previous composite `vision-montage.png` is intentionally excluded from this package to prevent accidental mixing.
+
+The AI carousel is labelled `AI VISUALISATION` on every slide and explicitly states that it is not a photograph of the current apartment.
