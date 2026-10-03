@@ -1553,6 +1553,19 @@ document.querySelectorAll('[data-wa-message]').forEach(link => {
   });
 });
 
+ /* Google Maps / directions tracking */
+document.querySelectorAll('a[href*="google.com/maps/dir"], a[href*="maps.app.goo.gl"]').forEach(link => {
+  link.addEventListener('click', () => {
+    const destination =
+      link.querySelector('b')?.textContent.trim() || 'FH Residency';
+
+    gtag('event', 'directions_click', {
+      destination: destination,
+      page_location: window.location.href
+    });
+  });
+});
+ 
 const form = document.getElementById('viewingForm');
 form.addEventListener('submit', e => {
   e.preventDefault();
