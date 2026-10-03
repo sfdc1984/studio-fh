@@ -12,18 +12,7 @@
 
   gtag('config', 'G-41MVES4XK9');
 </script>
-  <script>
-  document.addEventListener('click', function (e) {
-    const whatsappLink = e.target.closest('a[href*="wa.me"], a[href*="whatsapp"]');
-
-    if (whatsappLink) {
-      gtag('event', 'whatsapp_click', {
-        link_url: whatsappLink.href,
-        page_location: window.location.href
-      });
-    }
-  });
-</script>
+ 
   
   <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
   <meta content="#10100f" name="theme-color"/>
@@ -1555,6 +1544,11 @@ function openWhatsApp(message) {
 document.querySelectorAll('[data-wa-message]').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
+
+    gtag('event', 'whatsapp_click', {
+      page_location: window.location.href
+    });
+
     openWhatsApp(link.getAttribute('data-wa-message') || 'Hi, I found Unit 404 at FH Residency and would like to know more.');
   });
 });
@@ -1562,6 +1556,11 @@ document.querySelectorAll('[data-wa-message]').forEach(link => {
 const form = document.getElementById('viewingForm');
 form.addEventListener('submit', e => {
   e.preventDefault();
+
+  gtag('event', 'viewing_form_submit', {
+    page_location: window.location.href
+  });
+
   const fd = new FormData(form);
   const name = String(fd.get('name') || '').trim();
   const phone = String(fd.get('phone') || '').trim();
