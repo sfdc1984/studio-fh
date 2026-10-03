@@ -12,6 +12,18 @@
 
   gtag('config', 'G-41MVES4XK9');
 </script>
+  <script>
+  document.addEventListener('click', function (e) {
+    const whatsappLink = e.target.closest('a[href*="wa.me"], a[href*="whatsapp"]');
+
+    if (whatsappLink) {
+      gtag('event', 'whatsapp_click', {
+        link_url: whatsappLink.href,
+        page_location: window.location.href
+      });
+    }
+  });
+</script>
   
   <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
   <meta content="#10100f" name="theme-color"/>
